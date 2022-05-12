@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 s.name             = "BMPlayer"
 s.version          = "1.3.2"
 s.summary          = "Video Player Using Swift, based on AVPlayer"
-s.swift_versions   = "5"
+s.swift_versions   = "5.5"
 s.description      = <<-DESC
 Video Player Using Swift, based on AVPlayer, support for the horizontal screen, vertical screen, the upper and lower slide to adjust the volume, the screen brightness, or so slide to adjust the playback progress.
 DESC
@@ -16,7 +16,7 @@ s.social_media_url = 'http://weibo.com/536445669'
 
 s.ios.deployment_target = '10.0'
 s.platform     = :ios, '10.0'
-s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
+s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.5' }
 s.default_subspec = 'Full'
 
 s.subspec 'Core' do |core|
@@ -30,8 +30,8 @@ s.subspec 'Full' do |full|
     full.frameworks   = 'UIKit', 'AVFoundation'
 
     full.dependency 'BMPlayer/Core'
-    full.dependency 'SnapKit', '~> 5.0.0'
-    full.dependency 'NVActivityIndicatorView', '~> 4.7.0'
+    full.dependency 'SnapKit', '~> 5.6.0'
+    full.dependency 'NVActivityIndicatorView', '~> 5.1.1'
 end
 
 s.subspec 'CacheSupport' do |cache|
@@ -40,8 +40,8 @@ s.subspec 'CacheSupport' do |cache|
     cache.frameworks   = 'UIKit', 'AVFoundation'
 
     cache.dependency 'BMPlayer/Core'
-    cache.dependency 'SnapKit', '~> 5.0.0'
-    cache.dependency 'NVActivityIndicatorView', '~> 4.7.0'
+    cache.dependency 'SnapKit', '~> 5.6.0'
+    cache.dependency 'NVActivityIndicatorView', '~> 5.1.1'
     cache.dependency 'VIMediaCache'
 end
 
